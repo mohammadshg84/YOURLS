@@ -4,6 +4,54 @@ YOURLS Changelog
 _This file lists the main changes through all versions of YOURLS.  
 For a much more detailed list, simply refer to [commit messages](https://github.com/YOURLS/YOURLS/commits/master)._
 
+1.10.3
+---
+- added: testing on PHP 8.5 & 8.6 (#4036)
+- added: function to get reserved URLs from global variable (#3999)
+- added: database index on long URLs, for faster searches (#4013)
+- added: `$context` parameter of `yourls_get_db()` (#4020)
+- changed: hide referrers on public statistics page by default (#4005)
+- changed: set the infos cache of the keyword after a url is added/updated/deleted (#4008)
+- changed: fix hover-actions in tables for screen reader users (#4025)
+- changed: confirm link deletion with a modal dialog (#3932)
+- fixed: upgrade spatie/array-to-xml to address deprecation warnings in newer PHP version (#4037)
+- fixed: filtering for links with more than 0 clicks (#3977)
+- fixed: case-sensitivity in admin search (#3997)
+- fixed: missing or invalid reserved URL configuration causing crash (#3999)
+- fixed: handling of invalid charsets on remote sites (#4007)
+- fixed: preserve backslashes in URLs (#4000)
+- fixed: validate JSONP callback names (#4030)
+- fixed: enhance configuration template formatting (#3994)
+- fixed: minor cleanup (#3979, #3984, #3988)
+
+1.10.2
+---
+- fixed: `admin/tools.php` now uses `yourls_get_nonce_life()` (#3906)
+- fixed: "Display 1 to 0 of 0 URLs" on admin list page (#3910)
+- fixed: replace deprecated `get_all_options` filter with an action (#3683)
+- fixed: defer loading text domain after plugins (#3679)
+- removed: Gandi references (#3929)
+
+1.10.1
+---
+- fixed: sandbox exceptions when disabling plugins (#3893)
+- fixed: stats date calculation are now correct (#3895)
+- fixed: unexpected warning raised on login page
+- removed: unsupported installation cases with Composer
+
+1.10.0
+---
+- added: Support PHP 8.3 & 8.4
+- removed: Support for PHP prior to 8.1 which is now minimal requirement
+- changed: Ensure all `statusCode`/`errorCode` API values are strings (#3756)
+- fixed: Results with 0 clicks on search (#3589)
+- fixed: Upgrade Aura.SQL to fix PHP 8.4 compatibility (#3852)
+- fixed: login page accessibility (#3660)
+- fixed: MySQL 8+ compatibility (#3828)
+- changed: Upgrade dependencies
+- changed: Update GeoIP DB
+- changed: Update certificates
+
 1.9.2
 ---
 - added: Support PHP 8.2 (#3474)
